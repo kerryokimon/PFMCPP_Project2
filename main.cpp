@@ -84,7 +84,7 @@ void variableDeclarations()
     float myFloat = 0.1f;
     float hisFloat = 9.6f;
     float theirFloat = 55.55f;
-  ignoreUnused(x, myInt, B, myChar, myGrade, str, isMusicFun, isHotToday, amIYoung, myDouble, newDouble, myDoubleNum, myFloat, hisFloat, theirFloat);
+    ignoreUnused(x, myInt, B, myChar, myGrade, str, isMusicFun, isHotToday, amIYoung, myDouble, newDouble, myDoubleNum, myFloat, hisFloat, theirFloat);
 
     
     
@@ -194,26 +194,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    setVolume(8);
+    auto getVolume = setVolume(8);
     //2)
     getAge(4, 9);
     //3)
     auto getCompression = setThreshold(2, 9);
     //4)
-    setFiltFreq(333.33);
+    auto checkFreq = setFiltFreq(333.33);
     //5)
-    isFilt2Active(true);
+    auto checkFilt1 = isFilt2Active(true);
     //6)
-    getLfoRate();
+    auto lfoRateCheck = getLfoRate();
     //7)
-    setFiltType('b', 'l', 'h');
+    auto whichFiltersSet = setFiltType('b', 'l', 'h');
     //8)
-    getLfoDepth(3.5, 6.2);
+    auto getDepthLfo1 = getLfoDepth(3.5, 6.2);
     //9)
     val1(true, true) ;
     //10)
-    signal1(2,true);
-    ignoreUnused(getCompression);
+    auto testSignal = signal1(2,true);
+
+    ignoreUnused(getVolume, checkFreq, getCompression, checkFilt1, lfoRateCheck, whichFiltersSet, getDepthLfo1,testSignal);
 
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
