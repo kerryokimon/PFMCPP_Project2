@@ -16,16 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+    Integer int
+    Character char
+    Boolean bool
+    Floating Point float
+    Double Floating Point double
+    Valueless or Void Voic
+    Wide Character whar_t
+
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -33,14 +31,20 @@ video: Chapter 2 - Part 3
         'void' is a return type. you do not need to declare 3 variables of type 'void'.
     at the end of the function, pass each variable to the ignoreUnused function
  
+        
+
 3) write out 10 functions
     each declaration should have a random number of parameters in the function parameter list.
     add { ignoreUnused( ); } after each declaration in place of the closing semicolon
     pass each of your function parameters to the ignoreUnused function. 
     if your function returns something other than void, add 'return {};' at the end of it.
     
+   
+
 4) provide default values for an arbitrary number of parameters in the function parameter list.
     When naming your parameters, choose names that are relevant to the task implied by the function's name.
+    
+
     
 5) in the main function at the end: 
     for each of those functions declared, 
@@ -65,7 +69,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
+    int x = 1;
+    int myInt = 5;
+    int B = 10;
+    char myChar = 'd';
+    char myGrade = 'A';
+    char str = 'a';
+    bool isMusicFun = true;
+    bool isHotToday = true;
+    bool amIYoung = false;
+    double myDouble = 7.88;
+    double newDouble = 18.66;
+    double myDoubleNum = 1.88;
+    float myFloat = 0.1f;
+    float hisFloat = 9.6f;
+    float theirFloat = 55.55f;
+    ignoreUnused(x, myInt, B, myChar, myGrade, str, isMusicFun, isHotToday, amIYoung, myDouble, newDouble, myDoubleNum, myFloat, hisFloat, theirFloat);
+
     
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
@@ -80,72 +100,122 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
+    
+    
+   
+    
+    
+    
 /*
- 1)
+    1)
  */
-
+int setVolume(int db)
+{
+    ignoreUnused(db); 
+    return {};
+}
 /*
  2)
  */
-
+void getAge(int firstDigit, int secondDigit)
+{
+    ignoreUnused(firstDigit, secondDigit);
+        
+}
 /*
  3)
  */
-
+float setThreshold(int upper, int lower)
+{ 
+    ignoreUnused(upper, lower );
+    return {}; 
+}
 /*
  4)
  */
-
+double setFiltFreq(double freqHz)
+{
+    ignoreUnused(freqHz);
+    return {};  
+}
 /*
  5)
  */
-
+bool isFilt2Active(bool onFilt)
+{
+    ignoreUnused(onFilt); 
+    return {}; 
+}
 /*
  6)
  */
-
+int getLfoRate(int a = 80, int b = 90)
+{
+    ignoreUnused(a, b); 
+    return {}; 
+}
 /*
  7)
  */
-
+char setFiltType(char BP, char LP, char HP)
+{
+    ignoreUnused(BP, LP, HP); 
+    return {}; 
+}
+    
 /*
  8)
  */
-
+double getLfoDepth(double lfo1, double lfo2 )
+{
+    ignoreUnused(lfo1, lfo2); 
+    return {}; 
+}
+    
 /*
  9)
  */
-
+void val1(bool a, bool b) 
+{
+    ignoreUnused(a, b); 
+          
+}
 /*
  10)
  */
-
+char signal1(int signA = 1, bool clear = false)
+{
+    ignoreUnused(signA, clear); 
+    return {}; 
+}
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto getVolume = setVolume(8);
     //2)
-    
+    getAge(4, 9);
     //3)
-    
+    auto getCompression = setThreshold(2, 9);
     //4)
-    
+    auto checkFreq = setFiltFreq(333.33);
     //5)
-    
+    auto checkFilt1 = isFilt2Active(true);
     //6)
-    
+    auto lfoRateCheck = getLfoRate();
     //7)
-    
+    auto whichFiltersSet = setFiltType('b', 'l', 'h');
     //8)
-    
+    auto getDepthLfo1 = getLfoDepth(3.5, 6.2);
     //9)
-    
+    val1(true, true) ;
     //10)
-    
-    
+    auto testSignal = signal1(2,true);
+
+    ignoreUnused(getVolume, checkFreq, getCompression, checkFilt1, lfoRateCheck, whichFiltersSet, getDepthLfo1,testSignal);
+
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
