@@ -31,23 +31,7 @@ video: Chapter 2 - Part 3
         'void' is a return type. you do not need to declare 3 variables of type 'void'.
     at the end of the function, pass each variable to the ignoreUnused function
  
-        int x = 1;
-        int myInt = 5;
-        int B = 10;
-        char myChar = 'd';
-        char myGrade = 'A';
-        char str = 'a';
-        bool isMusicFun = true;
-        bool isHotToday = true;
-        bool amIYoung = false;
-        double myDouble = 7.88;
-        double newDouble = 18.66;
-        double myDoubleNum = 1.88;
-        float myFloat = 0.1f
-        float hisFloat = 9.6f
-        float theirFloat = 55.55f
-        ignoreunused(x, myInt, B, myChar, myGrade, str, isMusicFun, isHotToday, amIYoung, myDouble, newDouble, myDoubleNum, myFloat, hisFloat, theirFloat)
-
+        
 
 3) write out 10 functions
     each declaration should have a random number of parameters in the function parameter list.
@@ -55,27 +39,11 @@ video: Chapter 2 - Part 3
     pass each of your function parameters to the ignoreUnused function. 
     if your function returns something other than void, add 'return {};' at the end of it.
     
-    int setVolume(int A, int B){ ignoreUnused( ); }
-    void getAge(int firstDigit, int secondDigit){ ignoreUnused( ); }
-    float setThreshold(int upper, int lower){ ignoreUnused( ); }
-    double setFiltFreq(double freqHz){ ignoreUnused( ); }
-    bool isFilt2Active(bool onFilt){ ignoreUnused( ); }
-    int getLfoRate(int a = 80, int b = 90){ ignoreUnused( ); }
-    char setFiltType(char BP, char LP, char HP){ ignoreUnused( ); }
-    double getLfoFreq(double lfo1 double lfo2 ){ ignoreUnused( ); }
-    void val1(bool a, bool b) { ignoreUnused( ); }
+   
 
 4) provide default values for an arbitrary number of parameters in the function parameter list.
     When naming your parameters, choose names that are relevant to the task implied by the function's name.
-    int setVolume(int A, int B){ ignoreUnused( ); }
-    void getAge(int firstDigit = 4, int secondDigit = 9 ){ ignoreUnused( ); }
-    float setThreshold(int upper = 10.0f, int lower = 1.0f){ ignoreUnused( ); }
-    double setFiltFreq(double freqHz = 333.5 ){ ignoreUnused( ); }
-    bool isFilt2Active(bool onFilt = true){ ignoreUnused( ); }
-    int getLfoRate(int a = 80, int b = 90){ ignoreUnused( ); }
-    char setFiltType(char BP = 'B', char LP = 'L', char HP = 'H'){ ignoreUnused( ); }
-    double getLfoFreq(double lfo1 = 1.0 double lfo2 = 1.0) ){ ignoreUnused( ); }
-    void val1(bool a = true, bool b = false) { ignoreUnused( ); }
+    
 
     
 5) in the main function at the end: 
@@ -101,7 +69,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
+    int x = 1;
+    int myInt = 5;
+    int B = 10;
+    char myChar = 'd';
+    char myGrade = 'A';
+    char str = 'a';
+    bool isMusicFun = true;
+    bool isHotToday = true;
+    bool amIYoung = false;
+    double myDouble = 7.88;
+    double newDouble = 18.66;
+    double myDoubleNum = 1.88;
+    float myFloat = 0.1f;
+    float hisFloat = 9.6f;
+    float theirFloat = 55.55f;
+  ignoreUnused(x, myInt, B, myChar, myGrade, str, isMusicFun, isHotToday, amIYoung, myDouble, newDouble, myDoubleNum, myFloat, hisFloat, theirFloat);
+
     
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
@@ -123,87 +107,87 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     
     
 /*
-    1)i
+    1)
  */
-    int setVolume(int db)
-    {
-         ignoreUnused(db); 
-         return {};
-    }
+int setVolume(int db)
+{
+    ignoreUnused(db); 
+    return {};
+}
 /*
  2)
  */
-    void getAge(int firstDigit, int secondDigit)
-    {
-        ignoreUnused(firstDigit, secondDigit);
+void getAge(int firstDigit, int secondDigit)
+{
+    ignoreUnused(firstDigit, secondDigit);
         
-     }
+}
 /*
  3)
  */
-    float setThreshold(int upper, int lower)
-    { 
-        ignoreUnused(upper, lower );
-        return {}; 
-    }
+float setThreshold(int upper, int lower)
+{ 
+    ignoreUnused(upper, lower );
+    return {}; 
+}
 /*
  4)
  */
-    double setFiltFreq(double freqHz)
-    {
-         ignoreUnused(freqHz);
-         return {};  
-    }
+double setFiltFreq(double freqHz)
+{
+    ignoreUnused(freqHz);
+    return {};  
+}
 /*
  5)
  */
-    bool isFilt2Active(bool onFilt)
-    {
-         ignoreUnused(onFilt); 
-         return {}; 
-    }
+bool isFilt2Active(bool onFilt)
+{
+    ignoreUnused(onFilt); 
+    return {}; 
+}
 /*
  6)
  */
-    int getLfoRate(int a = 80, int b = 90)
-    {
-         ignoreUnused(a, b); 
-         return {}; 
-    }
+int getLfoRate(int a = 80, int b = 90)
+{
+    ignoreUnused(a, b); 
+    return {}; 
+}
 /*
  7)
  */
-    char setFiltType(char BP, char LP, char HP)
-    {
-         ignoreUnused(BP, LP, HP); 
-         return {}; 
-    }
+char setFiltType(char BP, char LP, char HP)
+{
+    ignoreUnused(BP, LP, HP); 
+    return {}; 
+}
     
 /*
  8)
  */
-    double getLfoDepth(double lfo1, double lfo2 )
-    {
-         ignoreUnused(lfo1, lfo2); 
-         return {}; 
-    }
+double getLfoDepth(double lfo1, double lfo2 )
+{
+    ignoreUnused(lfo1, lfo2); 
+    return {}; 
+}
     
 /*
  9)
  */
-    void val1(bool a, bool b) 
-    {
-         ignoreUnused(a, b); 
+void val1(bool a, bool b) 
+{
+    ignoreUnused(a, b); 
           
-    }
+}
 /*
  10)
  */
-    char signal1(int signA = 1, bool clear = false)
-    {
-         ignoreUnused(signA, clear); 
-         return {}; 
-    }
+char signal1(int signA = 1, bool clear = false)
+{
+    ignoreUnused(signA, clear); 
+    return {}; 
+}
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
@@ -229,7 +213,8 @@ int main()
     val1(true, true) ;
     //10)
     signal1(2,true);
-    ignoreUnused(setVolume, getAge, getCompression, setThreshold, setFiltFreq, isFilt2Active, getLfoRate, setFiltType, getLfoDepth, val1, signal1);
+    ignoreUnused(getCompression);
+
     ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
